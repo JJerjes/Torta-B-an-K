@@ -84,6 +84,13 @@ h1 {
     color: black;
 }
 
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
 h2 {
     padding: 10px;
     text-align: center;
