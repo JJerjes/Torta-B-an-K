@@ -63,13 +63,14 @@ h1 {
     width: 100%;
     text-align: center;
     text-decoration: none;
-    color: white;
+    color: navy;
     font-weight: bold;
+    transition: background 1s;
 }
 
 #nav a:hover {
+    transition: background 1s;
     background-color: beige;
-    color: navy;
 }
 
 .information {
@@ -124,16 +125,27 @@ footer {
     #nav.open {
         display: flex;
     }
-
+    
     #images {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        border: 1px solid red;
+        width: 100%;
+    }
+
+    h2 {
+        text-align: center;
+        border: 1px solid blue;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    #images, picture {
+        margin: 0 auto;
     }
 
     #images picture img {
-
         margin: 5px;
         border-radius: 5px;
     }
@@ -182,6 +194,11 @@ footer {
 
         margin: 5px;
         border-radius: 5px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
     }
 
     footer {
