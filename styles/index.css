@@ -74,7 +74,7 @@ header {
     position: absolute;
     width: 25px;
     height: 25px;
-    top: 110px;
+    top: 145px;
     left: 20px;
     background-color: transparent;
     border: none;
@@ -205,16 +205,24 @@ footer {
     border-radius: 10px;
 }
 
-
-
-
-@media (max-width: 500px) {
+@media (max-width: 400px) {
+    header h1 {
+        display: flex;
+        flex-direction: column;
+    }
     .torta-information {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        
+    }
+    .torta-logo-name {
+        display: flex;
+        flex-direction: column;
     }
     .torta-information a {
         color: #264653;
+        display: flex;
+        justify-content: start;
     }
     #menu {
         display: block;
@@ -247,7 +255,8 @@ footer {
     }
 
     main section div {
-        width: 400px;
+        width: 300px;
+        margin: 10px auto;
     }
 
     footer {
@@ -273,7 +282,6 @@ footer {
 
     .pay-medio a img{
         text-align: start;
-        border: 1px solid red;
     }
 } 
 
