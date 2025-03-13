@@ -1,4 +1,316 @@
+:root {
+    --primary-color: #a2d2ff;
+    --secondary-color: #f5e3c7;
+    --third-color: #a8d7b2;
+    --fouth-color: #d8b6a1;
+    --fiveth-color: #fff;
+    --sixth-color: #264653;
+    --seventh-color: #2a9d8f;
+    --eighth-color: #e9c46a;
+    --nineth-color: #f4a261;
+    --tenth-color: #e76f51;
+}
+
 * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vb;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    color: var(--fiveth-color);
+}
+
+.torta-information {
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: end;
+    background-color: var(--primary-color);
+}
+
+.torta-information a {
+     display: flex;
+     justify-content: end;
+     align-items: center;
+     text-decoration: none;
+     color: var(--fiveth-color);
+     font-size: small;
+     padding: 0 10px;
+}
+
+.torta-information a img {
+    padding: 0 5px;
+}
+
+.torta-logo-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #52A8AD;
+}
+
+.torta-logo-name img {
+    border-radius: 50px;
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 110px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#menu::after {
+    content: '=';
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--fiveth-color);
+}
+
+#menu.open::after {
+    content: '✖️';
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-color);
+    justify-content: space-around;
+}
+ #nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-left: .1px solid var(--fiveth-color);
+    transition: background .6s ease;
+ }
+
+ #nav a:hover {
+    background-color: var(--fiveth-color);
+ }
+
+
+main {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+main h2 {
+    text-align: center;
+    padding: 10px 30px;
+    color: var(--seventh-color);
+    font-weight: bolder;
+    text-align: start;
+}
+
+main section {
+    padding: 10px;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto;
+}
+
+section div {
+    border-radius: 10px;
+    margin: 5px;
+    width: 500px;
+    box-shadow: 0.1px 2px 4px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background 1s;
+}
+
+section div:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+section div p {
+    color: var(--fiveth-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    margin-top: auto;
+    background-color: var(--seventh-color);
+    padding: 20px 100px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto;
+    font-size: smaller;
+}
+
+.contact h3 {
+    font-size: 1.2rem;
+    padding: 10px 0;
+    font-weight: bold;
+    color: var(--fiveth-color);
+}
+
+.contact a {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 0;
+    text-decoration: none;
+    color: var(--fiveth-color);
+    font-weight:300;
+}
+
+
+.pay h3 {
+    font-size: 1.2rem;
+    padding: 3px;
+    font-weight: bold;
+    color: var(--fiveth-color);
+}
+
+.pay-medio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.pay-medio a img {
+    border-radius: 10px;
+}
+
+
+
+
+@media (max-width: 500px) {
+    .torta-information {
+        display: flex;
+        justify-content: center;
+    }
+    .torta-information a {
+        color: #264653;
+    }
+    #menu {
+        display: block;
+    }
+
+    #nav {
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+
+    #nav a {
+        text-align: start;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        width: 60%;
+        transition: background 1s ease;
+    }
+
+    #nav.open {
+        display: flex;
+    }
+
+    main h2 {
+        text-align: center;
+    }
+
+    main section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main section div {
+        width: 400px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact h3 {
+        text-align: center;
+    }
+
+    .pay h3 {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .pay-medio {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        
+    }
+
+    .pay-medio a img{
+        text-align: start;
+        border: 1px solid red;
+    }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -138,7 +450,7 @@ footer {
 
     main {
         display: grid;
-        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        grid-template-columns: 1fr; 
     }
 
     #images, picture {
@@ -198,7 +510,7 @@ footer {
 
     main {
         display: grid;
-        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        grid-template-columns: 1fr; 
     }
 
     footer {
@@ -210,4 +522,4 @@ footer {
         padding: 10px;
         font-size: smaller;
     }   
-}
+} */
